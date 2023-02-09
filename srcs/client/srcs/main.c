@@ -14,13 +14,29 @@
 
 int32_t	g_transmitted = 0;
 
+static int	is_uint(char *str)
+{
+	int	digits;
+	int	len;
+
+	len = 0;
+	digits = 0;
+	while (str[len])
+	{
+		if (ft_isdigit(str[len]))
+			digits++;
+		len++;
+	}
+	return (digits && len == digits);
+}
+
 int	main(int ac, char **av)
 {
 	char	*msg;
 	int		pid;
 
 	signal(SIGUSR1, bit_received);
-	if (ac == 3)
+	if (ac == 3 && is_uint(av[1]) && ft_atoi(av[1]))
 	{
 		pid = ft_atoi(av[1]);
 		msg = av[2];

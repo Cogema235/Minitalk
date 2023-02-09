@@ -6,7 +6,7 @@
 /*   By: nomoulin <nomoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 10:51:32 by nomoulin          #+#    #+#             */
-/*   Updated: 2023/02/09 13:46:48 by nomoulin         ###   ########.fr       */
+/*   Updated: 2023/02/09 19:54:07 by nomoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), \
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlen(const char *str);
+double			ft_pow(double x, unsigned int p);
+double			ft_atof(char *str);
 void			*ft_memset(void *offset, int value, size_t length);
 void			ft_bzero(void *offset, size_t size);
 void			*ft_memcpy(void *dest, const void *src, size_t length);
@@ -97,5 +99,6 @@ int				ft_lstsize(t_list *lst);
 int				ft_printf(const char *str, ...);
 int				append_chr(char chr, int len);
 int				append_str(char *str);
+int				ft_isnumber(char *str);
 
 #endif

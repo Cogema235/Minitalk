@@ -43,6 +43,8 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), \
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlen(const char *str);
+double			ft_pow(double x, unsigned int p);
+double			ft_atof(char *str);
 char			*ft_strchr(const char *str, int c);
 char			*ft_strrchr(const char *str, int c);
 char			*ft_strnstr(const char *str, const char *sstr, size_t length);
@@ -85,5 +87,6 @@ int				ft_memcmp(const void *s1, const void *s2, size_t length);
 int				ft_atoi(const char *str);
 int				ft_strcmp(const char *s1, const char *s2, size_t n);
 int				ft_lstsize(t_list *lst);
+int				ft_isnumber(char *str);
 
 #endif
