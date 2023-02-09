@@ -38,7 +38,7 @@ static	void	end_(t_dynastring *msg, uint8_t *allocated, uint32_t *recieved)
 	delete_dynastring(msg);
 	*allocated = 0;
 	ft_printf("\nFin du message, %d octets recus.\n\nPID : "\
-			"%d. En ecoute...\n", recieved - 6, getpid());
+			"%d. En ecoute...\n", *recieved - 6, getpid());
 	g_client.pid = 0;
 	g_client.defined = 0;
 	*recieved = 0;
